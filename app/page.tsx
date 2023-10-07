@@ -1,20 +1,16 @@
-import TextToSpeechForm from "@/components/TextToSpeechForm";
+import TextToSpeech from "@/components/TextToSpeech";
 
 
 const Home = () => {
   return (
-    <section className="container py-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+    <section className="container py-32 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      {/* hero text */}
+      <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold tracking-tight pb-10">
+        Generate Text to Speech in Second!
+      </h1>
 
-      <div className="grid lg:grid-cols-2 gap-4">
-
-        {/* speech genarator form */}
-        <TextToSpeechForm />
-
-        {/* output */}
-        <div className="w-full border border-dashed border-border rounded-md p-4 lg:p-6">
-          Output Goes Here
-        </div>
-      </div>
+      {/* speech genarator form */}
+      <TextToSpeech />
     </section>
   );
 };

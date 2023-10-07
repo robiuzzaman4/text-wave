@@ -1,9 +1,11 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import Footer from '@/components/Footer'
+
+const roboto = Roboto({ subsets: ['latin'], weight: ['300', '400', '500', '700'] })
 
 export const metadata: Metadata = {
   title: 'Text Wave',
@@ -17,11 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Navbar />
-        <div className=''>
+        <div className='min-h-[calc(100vh-104px)] flex items-center justify-center'>
           {children}
         </div>
+        <Footer/>
       </body>
     </html>
   )
