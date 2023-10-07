@@ -6,7 +6,7 @@ const Home = () => {
     <section className="container py-32 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
       {/* hero text */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold tracking-tight pb-10">
-        Generate Text to Speech in Second!
+        Generate <span className="text-orange-500">Text</span> to <span className="text-orange-500">Speech</span> in Second!
       </h1>
 
       {/* speech genarator form */}

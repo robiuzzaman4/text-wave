@@ -65,10 +65,10 @@ const TextToSpeech = () => {
   }
 
   return (
-    <section className="w-full grid lg:grid-cols-2 gap-4">
+    <section className="w-full grid lg:grid-cols-2 gap-4 overflow-hidden">
 
       {/* form */}
-      <div className="w-full border border-dashed border-border rounded-md p-4 lg:p-6">
+      <div className="border border-dashed border-border rounded-md p-4 lg:p-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 
@@ -165,12 +165,12 @@ const TextToSpeech = () => {
       </div>
 
       {/* output audio */}
-      <div className="w-full border border-dashed border-border rounded-md p-4 lg:p-6">
+      <div className="border border-dashed border-border rounded-md p-4 lg:p-6">
         <h2 className="text-center text-2xl font-bold pb-4">
           Generated Audio File
         </h2>
-        <div className="w-fit mx-auto">
-          <audio src={audio} controls autoPlay></audio>
+        <div className="w-full max-w-[16rem] sm:max-w-sm mx-auto">
+          <audio src={audio} controls autoPlay className="w-full"></audio>
         </div>
       </div>
 
